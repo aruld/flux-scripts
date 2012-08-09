@@ -2,16 +2,28 @@ h1. Flux Scripts for managing workflows
 
 h2. Upload workflow files to Flux repository:
 
-@./upload-workflow.sh template.ffc template@
+@
+Usage: upload-workflow.sh ffcFilename namespace
+Example: ./upload-workflow.sh template.ffc template
+@
 
 h2. Download workflow files from Flux repository:
 
-@./download-workflow.sh template@
+@
+Usage: download-workflow.sh namespace
+Example: ./download-workflow.sh template
+@
 
 h2. Deploy workflow to Flux engine:
 
-@./deploy-workflow.sh /template template.ffc@
+@
+Usage: deploy-workflow.sh namespace ffcFilename
+Example: ./deploy-workflow.sh /template template.ffc
+@
 
 h2. Remove workflow from Flux engine:
 
-@./kill-workflow.sh /template@
+@
+Usage: kill-workflow.sh namespace
+Example: ./kill-workflow.sh /template
+@

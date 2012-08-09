@@ -1,4 +1,4 @@
-h1. Flux Scripts for managing workflows
+h1. Scripts for managing Flux workflows
 
 h2. Setup
 

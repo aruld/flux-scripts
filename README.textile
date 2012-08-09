@@ -1,7 +1,9 @@
 h1. Flux Scripts for managing workflows
 
 h2. Setup
-Copy scripts to your local Flux install directory. These scripts uses Flux CLI and Flux REST APIs to interface with the engine.
+
+* Download and Extract Flux from http://flux.ly/download
+* Copy these scripts to your local Flux install directory. These scripts uses Flux CLI and Flux REST APIs to interface with the Flux engine.
 
 h2. Upload workflow files to Flux repository:
 

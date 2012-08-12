@@ -16,15 +16,13 @@ function ctrl_c() {
 }
 
 name=$1
-url="http://localhost:7186/cluster/repositoryFlowCharts/download?namespace=%2F$name"
-echo "url is $url"
+space_encoded=${name// /%20}
+slash_encoded=${space_encoded////%2F}
+url="http://localhost:7186/cluster/repositoryFlowCharts/download?namespace=$slash_encoded"
 
-#if [ $# -eq 1 ]
-#then
-        echo "Downloading workflow '$name' from repository..."
-	curl --user 'admin:admin' -O -J -L $url
+echo "Downloading workflow '$name' from repository..."
+curl -s -S --user 'admin:admin' -O -J -L $url
 echo "Done downloading $name!"
-#fi
 
 trap - INT
 

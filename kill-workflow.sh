@@ -30,13 +30,13 @@ echo "There are $activeCount workflows in $namespace"
 if [ $activeCount -gt 0 ]
 then
 	echo "Pausing $namespace..."
-	java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin pause "$namespace" > /dev/null
+	java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin pause "$namespace" | tail -2
 
 	echo "Interrupting $namespace..."
-	java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin interrupt "$namespace" > /dev/null
+	java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin interrupt "$namespace" | tail -2
 
 	echo "Removing $namespace..."
-	java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin remove "$namespace" > /dev/null
+	java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin remove "$namespace" | tail -2
 
 	echo "Done removing $namespace!"
 else

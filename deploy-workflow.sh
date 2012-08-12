@@ -24,10 +24,10 @@ do
   CLASSPATH=$CLASSPATH:$jar
 done
 
-java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin pause "$namespace"
-java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin interrupt "$namespace"
-java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin remove "$namespace"
+java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin pause "$namespace" | tail -2
+java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin interrupt "$namespace" | tail -2
+java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin remove "$namespace" | tail -2
 
-java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin export "$filename"
+java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin export "$filename" | tail -2
 
 trap - INT

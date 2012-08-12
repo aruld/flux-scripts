@@ -24,7 +24,7 @@ do
 done
 
 echo "Sizing $namespace..."
-activeCount=$(java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin size "$namespace" | tail -1 | sed 's/There .*\([0-9]\).*/\1/')
+activeCount=$(java -classpath $CLASSPATH flux.Main client -cp config/engine-config.properties -username admin -password admin size "$namespace" | tail -1 | awk '{ print $3 }')
 echo "There are $activeCount workflows in $namespace"
 
 if [ $activeCount -gt 0 ]

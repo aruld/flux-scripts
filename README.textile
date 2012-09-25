@@ -40,3 +40,12 @@ Usage: kill-workflow.sh namespace
 Example: ./kill-workflow.sh /template
 </code>
 </pre>
+
+h2. Start workflow from Flux repository:
+
+<pre>
+<code>
+Usage: start-workflow.sh namespace
+Example: ./start-workflow.sh /template
+</code>
+</pre>

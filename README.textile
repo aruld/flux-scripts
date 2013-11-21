@@ -9,7 +9,7 @@ h2. Upload workflow files to Flux repository:
 
 <pre>
 <code>
-Usage: upload-workflow.sh ffcFilename namespacei
+Usage: upload-workflow.sh ffcFilename namespace
 Example: ./upload-workflow.sh template.ffc template
 </code>
 </pre>
@@ -19,11 +19,11 @@ h2. Download workflow files from Flux repository:
 <pre>
 <code>
 Usage: download-workflow.sh namespace
-Example: ./download-workflow.sh template
+Example: ./download-workflow.sh /template
 </code>
 </pre>
 
-h2. Deploy workflow to Flux engine:
+h2. Deploy workflow to Flux engine (CLI):
 
 <pre>
 <code>
@@ -32,7 +32,7 @@ Example: ./deploy-workflow.sh /template template.ffc
 </code>
 </pre>
 
-h2. Remove workflow from Flux engine:
+h2. Remove workflow from Flux engine (CLI):
 
 <pre>
 <code>
